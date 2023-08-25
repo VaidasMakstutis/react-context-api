@@ -1,9 +1,15 @@
-const App = () => {
-  return (
-    <div className="App">
-      <h2>React Context Api</h2>
-    </div>
-  );
-};
+import React from "react";
+import FunctionContext from "./components/FunctionContext";
+import { ThemeProvider } from "./ThemeContext";
 
-export default App;
+export const ThemeContext = React.createContext();
+
+export default function App() {
+  return (
+    <>
+      <ThemeProvider>
+        <FunctionContext />
+      </ThemeProvider>
+    </>
+  );
+}
